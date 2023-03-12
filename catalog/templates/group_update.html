@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block    content  %}
+<form action="{% url 'catalog:update' object.pk %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type = 'submit'>修改通知</button>
+
+</form>
+{% endblock  %}

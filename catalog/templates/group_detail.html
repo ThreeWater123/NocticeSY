@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{%block content%}
+<h1>{{group.name}}</h1>
+<p>{{group.notice}}</p>
+<p>{{group.date}}</p>
+<p>{{group.get_update_url}}</p>
+
+<a href="{{group.get_update_url}}">
+    <button>修改通知</button>
+</a>
+{%endblock%}
