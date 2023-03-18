@@ -4,7 +4,7 @@
         {% if group_list %}
             {%for group in group_list%}
                 <li>
-                <a href="{{ group.get_absolute_url }}">{{ group.name }}</a> 
+                <a href="{% url 'catalog:group_detail' group.slug %}">{{ group.name }}</a> 
             </li>
             {% endfor %}
         {%else%}
